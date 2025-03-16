@@ -13,6 +13,6 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            🚀 Новый Pull Request в репозитории **${{ github.repository }}**  
-            👤 Автор: **${{ github.actor }}**  
-            🔗 [Ссылка на PR](${{ github.event.pull_request.html_url }})
+            🚀 Жаңы Pull Request ачылды!   
+            👤 Автор: ${{ github.actor }}  
+            🔗 ${{ github.event.pull_request.html_url }}
