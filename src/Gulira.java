@@ -7,21 +7,15 @@ public class Gulira {
             System.out.println("Сан: " + i);
         }
 
-        class WhileExample {
-            public static void main(String[] args) {
-                Scanner scanner = new Scanner(System.in);
-                String input = "";
-                while (input.equals("exit")) {
-                    System.out.println("Чыгыш үчүн 'exit' жаз");
-                    input = scanner.nextLine();
-                    System.out.println("Cиз " + input + " деп жаздыңыз");
-                }
-                System.out.println("Программа аяктады");
+            Scanner scanner = new Scanner(System.in);
+            String input = "";
 
+            while (input.equals("exit")) {
+                System.out.println("Чыгыш үчүн 'exit' жаз");
+                input = scanner.nextLine();
+                System.out.println("Cиз " + input + " деп жаздыңыз");
             }
+            System.out.println("Программа аяктады");
+
         }
     }
-}
-
-
-
