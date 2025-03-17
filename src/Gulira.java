@@ -1,21 +1,8 @@
 import java.util.Scanner;
 
-public class Gulira {
-
-    public static void main(String[] args) {
-        for (int i = 1; i < 5; i++) {
-            System.out.println("Сан: " + i);
-        }
-
-        for (int i = 10; i >= 1; i--) {
-            System.out.println(i);
-        }
-    }
-
-
-    public class WhileExample {
+    public class Gulira {
         public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
             String input = "";
 
             while (!"exit".equals(input)) {
@@ -26,10 +13,18 @@ public class Gulira {
 
             System.out.println("Программа аяктады");
 
+            for (int i = 10; i >=1; i--) {
+                System.out.println(i);
+            }
+
+            for (int i = 1; i >= 10; i++) {
+                System.out.println(i +" *10= " + (i*10));
+            }
+
             scanner.close();
         }
     }
-}
+
 
 
 
