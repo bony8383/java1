@@ -7,15 +7,29 @@ public class Gulira {
             System.out.println("Сан: " + i);
         }
 
+        for (int i = 10; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+
+
+    public class WhileExample {
+        public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             String input = "";
 
-            while (input.equals("exit")) {
-                System.out.println("Чыгыш үчүн 'exit' жаз");
+            while (!"exit".equals(input)) {
+                System.out.print("Сөз жаз (чыгыш үчүн 'exit'): ");
                 input = scanner.nextLine();
                 System.out.println("Cиз " + input + " деп жаздыңыз");
             }
+
             System.out.println("Программа аяктады");
 
+            scanner.close();
         }
     }
+}
+
+
+
