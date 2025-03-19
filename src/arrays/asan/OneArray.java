@@ -16,12 +16,12 @@ public class OneArray {
         System.out.println("Экинчи элемент: " + numbers[1]);
 
 
-        System.out.println("Массивдин узундугу: " + numbers.length);
+
 
 
         System.out.println("Numbers массиви: " + Arrays.toString(numbers));
 
-        ү
+
         for (int i = 0; i < numbers.length; i++) {
             System.out.println("Элемент №" + i + " = " + numbers[i]);
         }
