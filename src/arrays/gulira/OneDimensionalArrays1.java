@@ -1,9 +1,9 @@
-package arrays;
+package arrays.gulira;
 
 import java.util.Arrays;
 
 
-public class OneDimensionalArrays {
+public class OneDimensionalArrays1 {
     public static void main(String[] args) {
         int[] numbers = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
 
