@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class OneArray {
     public static void main(String[] args) {
         int[] numbers = new int[5];
-        numbers = new int[]{10, 20, 30, 40, 50,};
+        numbers = new int[]{10, 20, 30, 40, 50};
 
         System.out.println("Первый элемент: " + numbers[0]);
         System.out.println("Второй элемент: " + numbers[1]);
