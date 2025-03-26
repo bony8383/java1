@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class ArraysHomeWork {
         public static void main(String[] args) {
             int[] numbers = new int[5];
-            numbers = new int[]{10, 20, 30, 40, 50,};
             numbers = new int[]{10, 20, 30, 40, 50};
 
             System.out.println("Первый элемент: " + numbers[0]);
@@ -19,7 +18,7 @@ public class ArraysHomeWork {
             int [] num = {3, 6, 15, 89, 65, 14};
             int max = num [0];
             int min = num [0];
-            for (int i = 1; i < numbers.length; i++) {
+            for (int i = 1; i < num.length; i++) {
                 if (num[i] > max) {
                     max = num[i];
                 }
