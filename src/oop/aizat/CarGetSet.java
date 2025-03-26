@@ -56,7 +56,6 @@ public class CarGetSet {
         this.origin = origin;
         this.make = make;
     }
-
     // Пустой (дефолтный) конструктор
     public CarGetSet() {
         System.out.println("\n----- Первый объект -----");
