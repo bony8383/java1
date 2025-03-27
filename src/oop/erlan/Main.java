@@ -10,6 +10,6 @@ public class Main {
 
         System.out.println("Аты: " + p.getName());
         System.out.println("Жашы: " + p.getAge());
-
+//        ggg
     }
 }

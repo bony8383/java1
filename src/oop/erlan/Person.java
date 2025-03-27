@@ -26,7 +26,7 @@ public class Person {
             System.out.println("Ошибка: некорректный возраст!");
         }
     }
-
+//    GGG
     public void sagHallo () {
         System.out.println("Hallo zusammen! Meine Name is " + name + ". Ich bin " + age + " Jahre Jung!");
     }
