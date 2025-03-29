@@ -14,26 +14,15 @@ public class Main {
 }
 
  */
-        //1 оъект
-        Cat katze = new Cat();
-        katze.light = "Коричневый";
-        katze.type = "Мейн Кун";
-        katze.age = 5;
-        katze.weight =21.3;
+        SellCat sellCat2 =new SellCat("Черный","Бомбейская",13,5.7,800,1400,"США:ул.Вашингтон");
+        sellCat2.printSellCat2();
+        SellCat sellCat1 = new SellCat("Коричневый ","Мейн Кун ",5,21.3,200,1000,  " США:ул.Вашингтон" );
 
-        //2 объект
-        Cat katze1 = new Cat();
-        katze1.light = "Черный";
-        katze1.type = "Бомбейская";
-        katze1.age = 13;
-        katze1.weight = 5.7;
+        sellCat1.printSellCat1();
 
 
 
-        katze.catOrigins();
-        katze.catInfo();
 
-        katze1.catOrigins();
-        katze1.catInfo();
+
     }
 }
