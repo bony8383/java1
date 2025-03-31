@@ -5,7 +5,6 @@ public class Main {
 
         Phone phone = new Phone("Nokia", "3110", 99);
         phone.printInfo();
-        phone.printSmartphoneInfo();
 
         System.out.println("-------------Smartphone-----------");
         Smartphone smartphone = new Smartphone("iPhone", "16 Pro", 999, true, false);
