@@ -1,18 +1,40 @@
 package oop.asan;
 
 public class Cat {
-    String light;
-    String type;
-    int age;
-    double weight;
+    private String light;
+    private String type;
+    private int age;
+    private double weight;
 
-    public void catOrigins(){
-        System.out.println(type + " мышык " + " орточо " + age + " жыл жашайт " + " салмагы " + weight );
+    //Конструктор
+    public Cat(String light, String type, int age, double weight) {
+        this.light = light;
+        this.type = type;
+        this.age = age;
+        this.weight = weight;
+
     }
 
-    public void catInfo(){
-        System.out.println(light + " свет  кобунчо " + type + " пародада кездешет ");
+    public String getLight() {
+        return light;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void catOrigins() {
+        System.out.println(type + " мышыгы орточо " + age + " жыл жашайт " + " салмагы " + weight);
+    }
+
 }
 
 
