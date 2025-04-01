@@ -1,10 +1,11 @@
-// Version 1.0
+// Version 2.0
 package oop.omka;
 
 public class Car {
     private String marka;
     private int preis;
     private int year;
+    private int model;
 
     // Бош конструктор
     public Car() {
