@@ -1,13 +1,16 @@
+// Version 1.0
 package oop.omka;
 
 public class Car {
     private String marka;
     private int preis;
+    private int year;
 
     // Бош конструктор
     public Car() {
         this.marka = "Белгисиз";
         this.preis = 0;
+        this.year = 1970;
     }
 
     //Параметрлүү конструктор
@@ -17,12 +20,20 @@ public class Car {
     }
 
 //    Getter жана Setter
-    public String getMarka() {
-        return marka;
-    }
-
+//    public String getMarka() {
+//        return marka;
+//    }
+  //----
     public void setMarka(String marka) {
         this.marka = marka;
+    }
+
+    public void setYear(int year) {
+        if (year > 1900 && year < 2025) {
+            this.year = year;
+        } else {
+            System.out.println("Машинанын жылы туура эмес!");
+        }
     }
 
     public int getPreis() {
@@ -38,6 +49,6 @@ public class Car {
     }
 
     public void all() {
-        System.out.println("Машинанын маркасы: " + marka + ", Баасы: " + preis + " доллар турат.");
+        System.out.println("Машинанын маркасы: " + marka + ", баасы: " + preis + " доллар турат.");
     }
 }
