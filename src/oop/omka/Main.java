@@ -14,3 +14,4 @@ public class Main {
         System.out.println("Жаңыртылган баасы: " + car1.getPreis() + " доллар");
     }
 }
+// Ozgortuu

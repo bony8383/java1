@@ -17,10 +17,10 @@ public class Car {
     }
 
 //    Getter жана Setter
-    public String getMarka() {
-        return marka;
-    }
-
+//    public String getMarka() {
+//        return marka;
+//    }
+  //----
     public void setMarka(String marka) {
         this.marka = marka;
     }
