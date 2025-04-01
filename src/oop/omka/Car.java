@@ -19,6 +19,11 @@ public class Car {
         this.preis = preis;
     }
 
+//    Getter жана Setter
+//    public String getMarka() {
+//        return marka;
+//    }
+  //----
     public void setMarka(String marka) {
         this.marka = marka;
     }
