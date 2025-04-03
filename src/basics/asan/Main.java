@@ -39,15 +39,8 @@ public class Main {
         scanner.close();
 
 
-        System.out.println("\nВсе кошки:");
-        for (Cat cat : cats) {
-            if (cat instanceof Sale) {
-                ((Sale) cat).printSale();
-                System.out.println("------------------------------------------------");
-
-            }
+    }
 
         }
 
-    }
-}
+
