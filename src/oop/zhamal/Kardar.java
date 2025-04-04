@@ -31,7 +31,7 @@ public class Kardar {
     }
 
     public void belgisizKardar (){
-         System.out.println( " Kardar " + jaschy + " jashta " +  " Anyn aktualduu jaschagan jeri  " + adress +
-         " Jeke nomeri "+nomer+" Kardar en tez bolgon " + tolooKartasy + " arkyluu kotoro alat ." ) ;
+         System.out.println( " Kardar " + jaschy + " jashta " +  " Anyn aktualduu jaschagan jeri   " + adress +
+         " Jeke nomeri - " + nomer + ". Kardar en tez bolgon " + tolooKartasy + " arkyluu kotoro alat ." ) ;
      }
 }
