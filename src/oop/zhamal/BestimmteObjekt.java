@@ -3,7 +3,7 @@ package oop.zhamal;
 public class BestimmteObjekt {
     public static  void main ( String[] args){
 
-        System.out.println(" <<<<<<<<<<<< Phone Samsung <<<<<<<<<<" );
+        System.out.println(" <<<<<<<<<<<< Phone Samsung ....<<<<<<<<<<" );
         Phone phone = new Phone(" Samsung", " S21 ",   1200.99);
         phone.printInfo() ;
 
