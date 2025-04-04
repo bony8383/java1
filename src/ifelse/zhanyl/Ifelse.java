@@ -1,7 +1,7 @@
 package ifelse.zhanyl;
 
 public class Ifelse {
-    public static void Ifelse(String[] args) {
+    public static void main(String[] args) {
         int zahl1=-10;
         int zahl2=8;
         int a=zahl1 +zahl2 ;
