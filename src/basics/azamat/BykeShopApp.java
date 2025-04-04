@@ -27,7 +27,7 @@ public class BykeShopApp {
           System.out.print("Түрүн тандаңыз (мисалы: тоолук, шаардык): ");
           String type = scanner.nextLine();
 
-          bikes[count] = new Bicycle(model, type);
+          new Bicycle(model, type);
           count++;
           System.out.println("✅ Велосипед кошулду!");
         } else {

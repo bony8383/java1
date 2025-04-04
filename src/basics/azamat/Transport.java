@@ -14,7 +14,7 @@ public class Transport {
   }
 
   // Метод
-  public void printInfo() {
-    System.out.println("Велосипедтин модели: " + model);
+  public void printInfoTransport() {
+    System.out.println("Модели: " + model);
   }
 }

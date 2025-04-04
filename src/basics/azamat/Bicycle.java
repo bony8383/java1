@@ -3,7 +3,7 @@ package basics.azamat;
 public class Bicycle extends Transport {
   private String type;
 
-  // Геттер
+  // Конструктор
   public Bicycle(String model, String type) {
     super(model); // Bicycle үчүн
     this.type = type;
@@ -16,7 +16,7 @@ public class Bicycle extends Transport {
 
   // Метод
   public void printInfo() {
-    super.printInfo(); // Transport'тон чакырат
-    System.out.println("Велосипедтин түрү: " + type);
+    super.printInfoTransport(); // Transport'тон чакырат
+    System.out.println("Велосипеддит түрү: " + type);
   }
 }
