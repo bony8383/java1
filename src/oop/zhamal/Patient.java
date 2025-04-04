@@ -16,7 +16,7 @@ public class Patient extends Kardar {
 
     public void belgisizKardarJePatient(){
         super.belgisizKardar();
-        System.out.println ( " Bizdin bugunku operazia kylchy  Patient " + jynysy + " Aga  "
+        System.out.println ( " Jynysy  " + jynysy + " Aga  "
                 + kandynToptoru + " Gruppadagy kan  tuura kelet. " + "  Cave: Anyn "  + salmagy +
                 "  kg salmagyna  anasthesiany tuura karoo  kerek . ");
     }
