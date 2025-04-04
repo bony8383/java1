@@ -9,7 +9,7 @@ public class BestimmteObjekt {
 
         System.out.println( " <<<<<<<<<<<<<< Smartphone iPhone >><<<<<<<<<<");
 
-        Smartphone smartphone = new Smartphone(" iPhone", " 16 Pro", 2200, true, false);
+        Smartphone smartphone = new Smartphone(" iPhone ", " 16 Pro ", 2200, true, false);
         smartphone.printInfo() ;
         smartphone.printSmartphoneInfo() ;
 
