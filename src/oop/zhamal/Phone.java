@@ -27,8 +27,8 @@ public class Phone {
         }
 
         public void printInfo(){
-            System.out.println( " Brand" + brand) ;
-            System.out.println( " Model" + model) ;
-            System.out.println( " price" + price) ;
+            System.out.println( " Brand " + brand) ;
+            System.out.println( " Model " + model) ;
+            System.out.println( " price " + price) ;
         }
 }
