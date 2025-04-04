@@ -20,8 +20,8 @@ public class Smartphone extends Phone {        // extends >> bul murastoo.
 
     public void printSmartphoneInfo() {
         super.printInfo();
-        System.out.println(" Has a Kamera ?" + (hasCamera ? " Yes" : " NO"));
-        System.out.println(" Has a Internet ?" + (hasInternet ? " Yes" : " NO"));
+        System.out.println(" Has Kamera ?" + (hasCamera ? " Yes" : " NO"));
+        System.out.println(" Has  Internet ?" + (hasInternet ? " Yes" : " NO"));
 
     }
 }
