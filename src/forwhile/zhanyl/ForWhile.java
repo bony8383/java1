@@ -3,7 +3,7 @@ package forwhile.zhanyl;
 import java.util.Scanner;
 //Обратный порядок
 public class ForWhile {
-    public static void ForWhile(String[] args) {
+    public static void main(String[] args) {
             for (int i=10; i >=1; i --){
                 System .out .println("Сан:" + i);
             }
@@ -16,8 +16,7 @@ public class ForWhile {
                 System.out.println(n + " × " + i + " = " + (n * i));
             }
             //Запрашивать числа, пока не введут 0
-            Scanner scanner1 =new Scanner(System .in );
-            int number;
+        int number;
             do {
                 System .out .println("Введите число(0 для выхода)");;
                 number =scanner.nextInt() ;
