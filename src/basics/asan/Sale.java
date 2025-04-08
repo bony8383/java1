@@ -2,13 +2,13 @@ package basics.asan;
 
 public class Sale extends Cat {
     private int price;
-    private double price1; // доставка = deliveryCost
+    private double deliverPrice; // доставка = deliveryCost
     private String location;
 
-    public Sale(String name, String light, int age, int price, double price1, String location) {
+    public Sale(String name, String light, int age, int price, double deliverPrice, String location) {
         super(name, light, age);
         this.price = price;
-        this.price1 = price1;
+        this.deliverPrice = deliverPrice;
         this.location = location;
     }
 
@@ -16,8 +16,8 @@ public class Sale extends Cat {
         return price;
     }
 
-    public double getPrice1(){
-        return price1;
+    public double getDeliverPrice(){
+        return deliverPrice;
     }
 
     public String getLocation(){
@@ -27,7 +27,7 @@ public class Sale extends Cat {
     public void printSale() {
         super.profilCat();
         System.out.println("Баасы " + price);
-        System.out.println("Доставка " + price1);
+        System.out.println("Доставка " + deliverPrice);
         System.out.println("Адрес " + location);
     }
 }
