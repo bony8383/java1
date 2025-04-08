@@ -1,53 +1,50 @@
 package basics.asan;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CatStore {
     public static void main(String[] args) {
         int san = 1;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Канча мышык: ");
-        int summa = scanner.nextInt();
-        scanner.nextLine();
+        ArrayList<Sale> cats = new ArrayList<>();
 
-        Sale[] cats = new Sale[summa];
-        //Cat[] cats = new Cat[summa];
-
-        for (int i = 0; i < cats.length; i++) {
-            cats[i] = addCat(scanner, i);
-        }
 
         boolean menu = true;
 
         while (menu){
             System.out.println("----------Мышыктардын менюсу:---------");
-            System.out.println("1.Баардык мышыктарды коруу: ");
-            System.out.println("2.Жалпы баасын коруу (баасы + жеткируу): ");
-            System.out.println("3.Эн кымбат мышыкты коруу: ");
-            System.out.println("4.Эн арзан мышыкты коруу: ");
+            System.out.println("1.Жаны мышык кошуу: ");
+            System.out.println("2.Баардык мышыктарды коруу: ");
+            System.out.println("3.Жалпы баасын коруу (баасы + жеткируу): ");
+            System.out.println("4.Эн кымбат мышыкты коруу: ");
+            System.out.println("5.Эн арзан мышыкты коруу: ");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
 
             switch (choice){
                 case 1:
-                    showAllCats(cats);
+                    cats.add(addCat(scanner,cats.size()));
                     break;
                 case 2:
+                    showAllCats(cats);
+                    break;
+                case 3:
                     getTotal(cats);
                     System.out.println("Жалпы баасы (баасы + жеткируу):" + getTotal(cats));
                     break;
-                case 3:
+                case 4:
                     findExpensiveCat(cats);
                     break;
-                case 4:
+                case 5:
                     findCheapestCat(cats);
                     break;
-                case 5:
+                case 6:
                     menu = false;
                     System.out.println("Программа жабылды: ");
                     break;
-                case 6:
+                case 7:
                     System.out.println("Кайталап жазыныз: ");
             }
         }
@@ -81,7 +78,7 @@ public class CatStore {
         return new Sale(name, light, age, price, deliverPrice, location);
     }
 
-    public static void showAllCats(Sale[] cats) {
+    public static void showAllCats(ArrayList<Sale> cats) {
         System.out.println("\nБардык мышыктар:");
         for (Sale cat : cats) {
             cat.printSale();
@@ -89,16 +86,16 @@ public class CatStore {
         }
     }
 
-    public static double getTotal (Sale[] cats) {
+    public static double getTotal (ArrayList<Sale> cats) {
         double total = 0;
         for (Sale cat : cats){
-        total = cat.getPrice() + cat.getDeliverPrice();
+            total = cat.getPrice() + cat.getDeliverPrice();//туура эмес +=
        }
         return total;
     }
 
-    public static void findExpensiveCat(Sale[] cats) {
-        Sale max = cats [0];
+    public static void findExpensiveCat(ArrayList<Sale> cats) {
+        Sale max = cats.get(0);
         for (Sale cat : cats){
             if (cat.getPrice() > max.getPrice()){
                 max = cat;
@@ -107,8 +104,8 @@ public class CatStore {
         System.out.println("Эн кымбат: мышык ");
         max.printSale();
     }
-    public static void findCheapestCat(Sale[] cats) {
-        Sale min = cats [0];
+    public static void findCheapestCat(ArrayList<Sale> cats) {
+        Sale min = cats.get(0);
         for (Sale cat : cats){
             if (cat.getPrice() < min.getPrice()){
                 min = cat;
