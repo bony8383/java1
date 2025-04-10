@@ -62,7 +62,7 @@ public class Main {
                     salon.findExpensiveCars(minPrice);
 
                 }  else if (choice == 5) {
-                    System.out.println("Чыгуудасыңыз...");
+                    System.out.println("Чыгып кеттиниз");
                     running = false;
 
                 } else {
