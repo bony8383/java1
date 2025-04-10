@@ -2,17 +2,17 @@ package basics.aizat;
 
 public class CarSalon {
 
-        private Car[] cars;
+        private Car[] mashinalar;
         private int count;
 
         public CarSalon(int size) {
-            cars = new Car[size];
+            mashinalar = new Car[size];
             count = 0;
         }
 
-        public void addCar(Car car) {
-            if (count < cars.length) {
-                cars[count] = car;
+        public void addCar(Car mashinaKoshuu) {
+            if (count < mashinalar.length) {
+                mashinalar[count] = mashinaKoshuu;
                 count++;
             }
         }
@@ -22,24 +22,24 @@ public class CarSalon {
                 System.out.println("Салондо азырынча машиналар жок.");
             } else {
                 for (int i = 0; i < count; i++) {
-                    System.out.println((i + 1) + ". " + cars[i]);
+                    System.out.println((i + 1) + ". " + mashinalar[i]);
                 }
             }
         }
 
         public double getTotalPrice() {
-            double total = 0;
+            double sumPrice = 0;
             for (int i = 0; i < count; i++) {
-                total += cars[i].getPrice();
+                sumPrice += mashinalar[i].getPrice();
             }
-            return total;
+            return sumPrice;
         }
 
-        public void findExpensiveCars(double minPrice) {
-            boolean found = false;
+        public void findExpensiveCars(double minPrice) {  //параметр
+            boolean found = false; // машиналар табыла элек
             for (int i = 0; i < count; i++) {
-                if (cars[i].getPrice() >= minPrice) {
-                    System.out.println(cars[i]);
+                if (mashinalar[i].getPrice() >= minPrice) {
+                    System.out.println(mashinalar[i]);
                     found = true;
                 }
             }
