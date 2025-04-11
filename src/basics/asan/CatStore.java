@@ -12,7 +12,7 @@ public class CatStore {
 
         boolean menu = true;
 
-        while (menu){
+        while (menu) {
             System.out.println("----------Мышыктардын менюсу:---------");
             System.out.println("1.Жаны мышык кошуу: ");
             System.out.println("2.Баардык мышыктарды коруу: ");
@@ -23,7 +23,7 @@ public class CatStore {
             int choice = scanner.nextInt();
             scanner.nextLine();
 
-            switch (choice){
+            switch (choice) {
                 case 1:
                     cats.add(addCat(scanner,cats.size()));
                     break;
