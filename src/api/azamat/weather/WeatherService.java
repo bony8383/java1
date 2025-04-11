@@ -1,4 +1,4 @@
-package api.azamat;
+package api.azamat.weather;
 
 public class WeatherService {
     public Weather getWeather(String city) {
