@@ -7,7 +7,6 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             CarSalon salon = new CarSalon(100); // массив өлчөмү
 
-            // Базадагы алдын ала кошулган 5 машина
             salon.addCar(new Car("Арстан", "Toyota", "Camry", 2022, 25000));
             salon.addCar(new Car("Жолборс", "BMW", "X5", 2023, 55000));
             salon.addCar(new Car("Бүркүт", "Kia", "K5", 2020, 21000));
