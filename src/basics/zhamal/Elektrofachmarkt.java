@@ -21,6 +21,26 @@ public class Elektrofachmarkt {
         for ( int i= 0; i < auswahl.length; i++){
             auswahl[i].info();
         }
+
+        int eingabe = -1;
+        while (true) {
+            System.out.println("Welches Produkt möchtest du kaufen? (Nummer 0 bis 2)");
+            eingabe = scanner.nextInt();
+            if (eingabe >= 0 && eingabe < auswahl.length) {
+                TVundAudio produkt = auswahl[eingabe];
+
+                if (produkt.getVerfügbarkeit()) {
+                    System.out.println("✅ Das Produkt ist verfügbar:");
+                    produkt.info();
+                    break; // Beende die Schleife, weil alles passt
+                } else {
+                    System.out.println("❌ Dieses Produkt ist nicht verfügbar. Wähle ein anderes.");
+                }
+            } else {
+                System.out.println("⚠️ Ungültige Zahl. Bitte gib 0, 1 oder 2 ein.");
+            }
+        }
+
         System.out.println( " Wie alt sind Sie ? ");
                 int alter = scanner.nextInt();
 
@@ -30,6 +50,7 @@ public class Elektrofachmarkt {
                 } else {
                     System.out.println(" ");
                 }
+
         scanner.close();
             }
         }
