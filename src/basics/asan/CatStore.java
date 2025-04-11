@@ -7,6 +7,7 @@ public class CatStore {
     public static void main(String[] args) {
         int san = 1;
         Scanner scanner = new Scanner(System.in);
+        //Динамыкалык массив
         ArrayList<Sale> cats = new ArrayList<>();
 
 
@@ -78,6 +79,7 @@ public class CatStore {
         return new Sale(name, light, age, price, deliverPrice, location);
     }
 
+    //Баардык мышыктар
     public static void showAllCats(ArrayList<Sale> cats) {
         System.out.println("\nБардык мышыктар:");
         for (Sale cat : cats) {
@@ -86,6 +88,7 @@ public class CatStore {
         }
     }
 
+    //жалпы сумма
     public static double getTotal (ArrayList<Sale> cats) {
         double total = 0;
         for (Sale cat : cats){
@@ -94,6 +97,7 @@ public class CatStore {
         return total;
     }
 
+    //кымбат мышык
     public static void findExpensiveCat(ArrayList<Sale> cats) {
         Sale max = cats.get(0);
         for (Sale cat : cats){
@@ -104,6 +108,8 @@ public class CatStore {
         System.out.println("Эн кымбат: мышык ");
         max.printSale();
     }
+
+    //арзан мышык
     public static void findCheapestCat(ArrayList<Sale> cats) {
         Sale min = cats.get(0);
         for (Sale cat : cats){
