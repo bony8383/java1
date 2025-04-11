@@ -2,6 +2,8 @@ package api.azamat;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        WeatherService service = new WeatherService();
+        Weather weather = service.getWeather("Bishkek");
+        weather.print();
     }
 }
