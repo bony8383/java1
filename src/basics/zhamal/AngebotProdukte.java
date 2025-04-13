@@ -6,13 +6,14 @@ public class AngebotProdukte {
     private double zoll;
     private boolean bluetooth;
 
-    public AngebotProdukte  ( String model , double zoll , boolean bluetooth ){
+    public AngebotProdukte(String model, double zoll, boolean bluetooth) {
         this.model = model;
         this.zoll = zoll;
-        this.bluetooth = bluetooth ;
+        this.bluetooth = bluetooth;
     }
-    public String getModel (){
-       return(model ) ;
+
+    public String getModel() {
+        return model;
     }
 
     public double getZoll() {
@@ -23,11 +24,11 @@ public class AngebotProdukte {
         return bluetooth;
     }
 
-    public void info()
-    {   System.out.println( " <<< Die Besten Angebote und Aktionen nur für Java lernende >>> ");
-        System.out.println( " Model :" + model + " \n Größe : " + zoll +
-            " \n Bluetooth Verbindung : " + ( bluetooth ? " Ja ✅ " : "Nein"));
-
+    public void info() {
+        System.out.println("<<< Die besten Angebote und Aktionen nur für Java Lernende! >>>");
+        System.out.println("📺 Modell: " + model);
+        System.out.println("📐 Größe: " + zoll + " Zoll");
+        System.out.println("📶 Bluetooth: " + (bluetooth ? "Ja ✅" : "Nein ❌"));
     }
-
 }
+

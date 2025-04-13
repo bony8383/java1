@@ -6,54 +6,78 @@ public class Elektrofachmarkt {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        AngebotProdukte elektronik = new AngebotProdukte(" : Gaming Fernseher ", 85.5, true);
-        elektronik.info();
+        // Продукт массиви
+        TVundAudio[] auswahl = new TVundAudio[3];
+        auswahl[0] = new TVundAudio("Music Box", 12, true, 889, true);
+        auswahl[1] = new TVundAudio("Samsung Galaxy", 45, false, 776, false);
+        auswahl[2] = new TVundAudio("Huawei", 6, true, 987, true);
 
-        TVundAudio rabatt = new TVundAudio(" JBL", 24, true, 75.9, true);
-        rabatt.Elektroabteilung();
+        int auswahlMenu = -1;
 
-        TVundAudio [] auswahl = new TVundAudio[3];
-        auswahl[0] = new TVundAudio( " Music Box", 12.5, true,889, true) ;
-        auswahl[1] = new TVundAudio(" Samsung Galaxy", 45, false, 776, false) ;
-        auswahl[2] = new TVundAudio( " Huawei", 6, true, 987, true) ;
+        do {
+            // ----------- Меню -----------
+            System.out.println("\n📱 ELEKTROFACHMARKT MENÜ:");
+            System.out.println("1 - Alle Produkte anzeigen");
+            System.out.println("2 - Produkt kaufen");
+            System.out.println("3 - Ratenzahlung prüfen");
+            System.out.println("0 - Beenden");
+            System.out.print("Bitte wählen Sie: ");
+            auswahlMenu = scanner.nextInt();
 
-        System.out.println(" Alle Produkte: ");
-        for ( int i= 0; i < auswahl.length; i++){
-            auswahl[i].info();
-        }
+            switch (auswahlMenu) {
+                case 1:
+                    System.out.println("\n📋 Verfügbare Produkte:");
+                    for (int i = 0; i < auswahl.length; i++) {
+                        System.out.println("🔢 Produkt #" + i);
+                        auswahl[i].info();
+                        System.out.println("----------------------");
+                    }
+                    break;
 
-        int eingabe = -1;
-        while (true) {
-            System.out.println("Welches Produkt möchtest du kaufen? (Nummer 0 bis 2)");
-            eingabe = scanner.nextInt();
-            if (eingabe >= 0 && eingabe < auswahl.length) {
-                TVundAudio produkt = auswahl[eingabe];
+                case 2:
+                    int eingabe = -1;
+                    while (true) {
+                        System.out.print("Welches Produkt möchten Sie kaufen? (Nummer 0 bis 2): ");
+                        eingabe = scanner.nextInt();
+                        if (eingabe >= 0 && eingabe < auswahl.length) {
+                            TVundAudio produkt = auswahl[eingabe];
+                            if (produkt.getVerfügbarkeit()) {
+                                System.out.println("✅ Das Produkt ist verfügbar:");
+                                produkt.info();
+                                break;
+                            } else {
+                                System.out.println("❌ Dieses Produkt ist nicht verfügbar.");
+                                break;
+                            }
+                        } else {
+                            System.out.println("⚠️ Ungültige Nummer. Bitte 0, 1 oder 2 eingeben.");
+                        }
+                    }
+                    break;
 
-                if (produkt.getVerfügbarkeit()) {
-                    System.out.println("✅ Das Produkt ist verfügbar:");
-                    produkt.info();
-                    break; // Beende die Schleife, weil alles passt
-                } else {
-                    System.out.println("❌ Dieses Produkt ist nicht verfügbar. Wähle ein anderes.");
-                }
-            } else {
-                System.out.println("⚠️ Ungültige Zahl. Bitte gib 0, 1 oder 2 ein.");
+                case 3:
+                    System.out.print("Wie alt sind Sie? ");
+                    int alter = scanner.nextInt();
+                    if (alter >= 18) {
+                        System.out.println("✅ Sie haben Möglichkeit für Ratenzahlung.");
+                    } else {
+                        System.out.println("❌ Leider keine Ratenzahlung möglich.");
+                    }
+                    break;
+
+                case 0:
+                    System.out.println("👋 Programm beendet. Danke!");
+                    break;
+
+                default:
+                    System.out.println("❗ Ungültige Auswahl. Bitte nochmal versuchen.");
             }
-        }
 
-        System.out.println( " Wie alt sind Sie ? ");
-                int alter = scanner.nextInt();
-
-                if (alter >= 18 ) {
-                    System.out.println(" Sie haben Möglichkeit für Rathenzahlung ");
-
-                } else {
-                    System.out.println(" ");
-                }
+        } while (auswahlMenu != 0);
 
         scanner.close();
-            }
-        }
+    }
+}
 
 
 

@@ -5,7 +5,7 @@ public class TVundAudio extends AngebotProdukte {
     private double preis;
     private boolean verfügbarkeit;
 
-    public TVundAudio ( String model, double zoll, boolean bluetooth , double preis, boolean verfügbarkeit) {
+    public TVundAudio(String model, double zoll, boolean bluetooth, double preis, boolean verfügbarkeit) {
         super(model, zoll, bluetooth);
         this.preis = preis;
         this.verfügbarkeit = verfügbarkeit;
@@ -18,9 +18,18 @@ public class TVundAudio extends AngebotProdukte {
     public double getPreis() {
         return preis;
     }
-   public void Elektroabteilung(){
+
+    public void Elektroabteilung() {
         super.info();
-        System.out.println( " Liebe Java Kunde , 50 % Angebot gilt nur für heute ! " + " \n  Aktuell kostet " +
-                preis + " $ " + " \n Verfügbar ? " + ( verfügbarkeit ? " Nein ❌ " : " Ja "));
-   }
+        System.out.println("💥 Liebe Java Kunden, 50% Rabatt gilt nur für heute!");
+        System.out.println("💰 Aktueller Preis: " + preis + " $");
+        System.out.println("✔️ Verfügbar: " + (verfügbarkeit ? "Ja ✅" : "Nein ❌"));
+    }
+
+    @Override
+    public void info() {
+        super.info();
+        System.out.println("💰 Preis: " + preis + " $");
+        System.out.println("✔️ Verfügbar: " + (verfügbarkeit ? "Ja ✅" : "Nein ❌"));
+    }
 }
