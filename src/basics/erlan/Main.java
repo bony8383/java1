@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Player[] players = new Player[11];
-        Transfer[] transfers = new Transfer[11];
+        Player[] players = new Player[1];
+        Transfer[] transfers = new Transfer[1];
         int playerCount = 0;
 
         Scanner scanner = new Scanner(System.in);
@@ -21,31 +21,35 @@ public class Main {
             int choice = scanner.nextInt();
 
             if (choice == 1) {
-                scanner.nextLine(); // очистка
+                if (playerCount < players.length) {
+                    scanner.nextLine(); // очистка
 
-                System.out.print("Имя: ");
-                String name = scanner.nextLine();
+                    System.out.print("Имя: ");
+                    String name = scanner.nextLine();
 
-                System.out.print("Возраст: ");
-                int age = scanner.nextInt();
+                    System.out.print("Возраст: ");
+                    int age = scanner.nextInt();
 
-                scanner.nextLine(); // очистка
-                System.out.print("Позиция: ");
-                String position = scanner.nextLine();
+                    scanner.nextLine(); // очистка
+                    System.out.print("Позиция: ");
+                    String position = scanner.nextLine();
 
-                System.out.print("Голов: ");
-                int goals = scanner.nextInt();
+                    System.out.print("Голов: ");
+                    int goals = scanner.nextInt();
 
-                System.out.print("Цена трансфера ($): ");
-                double price = scanner.nextDouble();
+                    System.out.print("Цена трансфера ($): ");
+                    double price = scanner.nextDouble();
 
-                Player player = new Player(name, age, position, goals);
-                players[playerCount] = player;
-                transfers[playerCount] = new Transfer(player, price);
-                playerCount++;
+                    Player player = new Player(name, age, position, goals);
+                    players[playerCount] = player;
+                    transfers[playerCount] = new Transfer(player, price);
+                    playerCount++;
 
-                System.out.println("Игрок добавлен!");
+                    System.out.println("Игрок добавлен!");
 
+                } else {
+                    System.out.println("Состав переполнен. Добавление нового игрока невозможно!!!");
+                }
             } else if (choice == 2) {
                 for (int i = 0; i < playerCount; i++) {
                     players[i].showInfo();
