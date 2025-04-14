@@ -26,9 +26,9 @@ public class AngebotProdukte {
 
     public void info() {
         System.out.println("<<< Die besten Angebote und Aktionen nur für Java Lernende! >>>");
-        System.out.println("📺 Modell: " + model);
-        System.out.println("📐 Größe: " + zoll + " Zoll");
-        System.out.println("📶 Bluetooth: " + (bluetooth ? "Ja ✅" : "Nein ❌"));
+        System.out.println(" Modell: " + model);
+        System.out.println(" Größe: " + zoll + " Zoll");
+        System.out.println(" Bluetooth: " + (bluetooth ? "Ja ✅" : "Nein ❌"));
     }
 }
 

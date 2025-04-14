@@ -6,31 +6,28 @@ public class Elektrofachmarkt {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Продукт массиви
         TVundAudio[] auswahl = new TVundAudio[3];
         auswahl[0] = new TVundAudio("Music Box", 12, true, 889, true);
-        auswahl[1] = new TVundAudio("Samsung Galaxy", 45, false, 776, false);
-        auswahl[2] = new TVundAudio("Huawei", 6, true, 987, true);
+        auswahl[1] = new TVundAudio("Samsung ", 45, false, 776, false);
+        auswahl[2] = new TVundAudio("Huawei", 80,true, 1200,  true);
 
         int auswahlMenu = -1;
 
         do {
-            // ----------- Меню -----------
-            System.out.println("\n📱 ELEKTROFACHMARKT MENÜ:");
-            System.out.println("1 - Alle Produkte anzeigen");
-            System.out.println("2 - Produkt kaufen");
-            System.out.println("3 - Ratenzahlung prüfen");
-            System.out.println("0 - Beenden");
+            System.out.println(" ELEKTROFACHMARKT MENÜ:");
+            System.out.println(" 1 - Alle Produkte anzeigen ");
+            System.out.println(" 2 - Produkt kaufen ");
+            System.out.println(" 3 - Ratenzahlung prüfen ");
+            System.out.println(" 0 - Beenden ");
             System.out.print("Bitte wählen Sie: ");
             auswahlMenu = scanner.nextInt();
 
             switch (auswahlMenu) {
                 case 1:
-                    System.out.println("\n📋 Verfügbare Produkte:");
+                    System.out.println(" Verfügbare Produkte:");
                     for (int i = 0; i < auswahl.length; i++) {
-                        System.out.println("🔢 Produkt #" + i);
+                        System.out.println(" Produkt #" + i);
                         auswahl[i].info();
-                        System.out.println("----------------------");
                     }
                     break;
 
@@ -72,7 +69,6 @@ public class Elektrofachmarkt {
                 default:
                     System.out.println("❗ Ungültige Auswahl. Bitte nochmal versuchen.");
             }
-
         } while (auswahlMenu != 0);
 
         scanner.close();

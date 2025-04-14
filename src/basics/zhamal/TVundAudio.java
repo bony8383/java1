@@ -21,15 +21,14 @@ public class TVundAudio extends AngebotProdukte {
 
     public void Elektroabteilung() {
         super.info();
-        System.out.println("💥 Liebe Java Kunden, 50% Rabatt gilt nur für heute!");
-        System.out.println("💰 Aktueller Preis: " + preis + " $");
-        System.out.println("✔️ Verfügbar: " + (verfügbarkeit ? "Ja ✅" : "Nein ❌"));
+        System.out.println(" Liebe Java Kunden, 50% Rabatt gilt nur für heute!");
+        System.out.println(" Aktueller Preis: " + preis + " $");
+        System.out.println("✔ Verfügbar: " + (verfügbarkeit ? "Ja ✅" : "Nein ❌"));
     }
 
-    @Override
     public void info() {
         super.info();
-        System.out.println("💰 Preis: " + preis + " $");
-        System.out.println("✔️ Verfügbar: " + (verfügbarkeit ? "Ja ✅" : "Nein ❌"));
+        System.out.println(" Preis: " + preis + " $");
+        System.out.println(" Verfügbar: " + (verfügbarkeit ? "Ja ✅" : "Nein ❌"));
     }
 }
