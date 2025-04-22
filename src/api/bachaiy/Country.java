@@ -8,4 +8,7 @@ public class Country {
     String capital;
     String President;
     String  currency;
+    String description;
+
+    public Country(String name,String population,String languages,String a)
 }
