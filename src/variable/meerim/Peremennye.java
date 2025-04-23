@@ -1,8 +1,6 @@
 package variable.meerim;
 
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Locale;
 import java.util.Scanner;
 
