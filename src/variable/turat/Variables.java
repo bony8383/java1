@@ -13,7 +13,7 @@ public class Variables {
         boolean isStudent = false;
         boolean isTeacher = true;
 
-        double som = 67.9;;
+        double som = 67.9;
 
         System.out.println("Сүттүн баасы "  + som +  " $ баада турат");
 
@@ -25,5 +25,5 @@ public class Variables {
         int nandynBaasy = 35;
 
         System.out.println("Учурдагы биздин чыгаша? " + (suttunBaasy + nandynBaasy));
-};
+}
 }
