@@ -1,6 +1,7 @@
 package variable.meerim.CreditApplication;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class CreditApplication {
     private String name;
@@ -103,5 +104,11 @@ public class CreditApplication {
                 "employment: " + employment + "\n" +
                 "creditDetails: " + creditDetails + "\n";
 
+    }
+
+    public boolean isEligibleForCredit() {
+        LocalDate today = LocalDate.now();
+        int age = Period.between(this.birthday, today).getYears();
+        return age >= 18;
     }
 }
