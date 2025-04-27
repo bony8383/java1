@@ -56,7 +56,7 @@ public class Variable {
         System.out.println("Кемитуу: " + (num - num2));
         System.out.println("Кобойтуу: " + (num * num2));
 
-        if (num != 0 ) {
+        if (num2 != 0 ) {
             System.out.println("Болуу: " + (num / num2));
             System.out.println("Калдык: " + (num % num2));
         } else {
