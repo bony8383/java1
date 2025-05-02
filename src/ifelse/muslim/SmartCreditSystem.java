@@ -17,28 +17,28 @@ public class SmartCreditSystem{
         int age = getAge(scanner);
         if (age < 21 || age > 66) {
             System.out.println("🚫 Жашыңыз 21 менен 66 арасында болушу керек.");
-            System.out.println("❌ Финиш!");
+            System.out.println("❌");
             return;
         }
 
         double income = getIncome(scanner);
         if (income < 40000) {
             System.out.println("🚫 Айлык кирешеңиз 40,000 сомдон жогору болушу керек.");
-            System.out.println("❌ Финиш!");
+            System.out.println("❌");
             return;
         }
 
         int experience = getExperience(scanner);
         if (experience < 2) {
             System.out.println("🚫 Иш тажрыйбаңыз жетишсиз.");
-            System.out.println("❌ Финиш!");
+            System.out.println("❌");
             return;
         }
 
         String creditHistory = getCreditHistory(scanner);
         if (!creditHistory.equalsIgnoreCase("ооба")) {
             System.out.println("🚫 Кредиттик тарыхыңыз жакшы эмес.");
-            System.out.println("❌ Финиш!");
+            System.out.println("❌");
             return;
         }
 
@@ -51,7 +51,7 @@ public class SmartCreditSystem{
 
         if (totalMonthlyDebt > income) {
             System.out.println("🚫 Айлык кирешеңиз башка карыздар жана жаңы кредит үчүн жетишсиз.");
-            System.out.println("❌ Финиш!");
+            System.out.println("❌");
             return;
         }
 
