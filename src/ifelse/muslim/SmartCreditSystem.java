@@ -17,7 +17,7 @@ public class SmartCreditSystem{
         int age = getAge(scanner);
         if (age < 21 || age > 66) {
             System.out.println("🚫 Жашыңыз 21 менен 66 арасында болушу керек.");
-            System.out.println("❌");
+            System.out.println("❌❌");
             return;
         }
 
