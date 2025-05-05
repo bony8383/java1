@@ -9,18 +9,18 @@ public class CalculateApp {
 
         // while работает после условия пока не будет истинны
 
-      int a = 1;
-      while (a <= 10){
+      int calculate1 = 1;
+      while (calculate1 <= 10){
           int b = 5;
-          System.out.println(a + "*" + b + "=" + (a * b));
-          a++;
+          System.out.println(calculate1 + "*" + b + "=" + (calculate1 * b));
+          calculate1++;
       }
 
-      int d = 1;
-      while (d <= 10) {
+      int calculate2 = 1;
+      while (calculate2 <= 10) {
           int c = 9;
-          System.out.printf("%d * %d = %d \n",d, c, d * c);
-          d++;
+          System.out.printf("%d * %d = %d \n",calculate2, c, calculate2 * c);
+          calculate2++;
       }
         System.out.println("Программа завершилась !!! ");
 
@@ -35,12 +35,13 @@ public class CalculateApp {
 
 
         // do
-        int number = 5;
+        int a = 5;
         do {
-            System.out.println("a >>> " + number);
-            number++;
-        } while (number <= 40);
+            System.out.println("a >>> " + a);
+            a++;
+        } while (a <= 40);
 
+        // проверка с String
 
         Scanner scanner = new Scanner(System.in);
         String input = "";
@@ -52,6 +53,22 @@ public class CalculateApp {
         }
         System.out.println("Программа завершилась");
         System.out.println("Идет следющая программа");
+
+        // проверка с int
+//
+//       Scanner scanner1 = new Scanner(System.in);
+        int number = -1;
+        while (number != 0) {
+            System.out.println("Напишите любые числа если хотите выйти нажмите 0 ");
+            if (scanner.hasNextInt()) {
+                number = scanner.nextInt();
+            } else {
+                System.out.println("Программа не должна соддержать числа а только строку !!! ");
+                scanner.next();
+            }
+        }
+        System.out.println("Программа завершилась !!! ");
+        scanner.close();
     }
 }
 
