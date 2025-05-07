@@ -15,6 +15,6 @@ public class DoWhileExample {
             }
         } while (number != 0);
 
-        System.out.println("Цикл токтоду. Сиз 0 жаздыңыз.");
+        System.out.println("Цикл токтоду. Сиз 0 санын жаздыңыз.");
     }
 }
