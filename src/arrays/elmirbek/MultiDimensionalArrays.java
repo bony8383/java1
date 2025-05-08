@@ -1,55 +1,64 @@
 package arrays.elmirbek;
-import java.util.Arrays;
+// Explanation
+// Многомерный массив — это структура данных,
+// которая хранит данные в виде таблицы,
+// матрицы или более сложной формы.
+// Проще говоря, это массив, внутри которого есть другие массивы.
+
+import jdk.jshell.execution.Util;
+
 import java.util.Scanner;
 
-
-// Explanation
-// Массив - это структура данных,
-// позволяет хранить набор элементов одного типа
-// (например, int, String, и т.д.) под одним именем.
-// У каждого элемента массива есть индекс (номер),
-// с помощью которого к нему можно обратиться.
-
+// [Задача - Көп өлчөмдүү массивдер]
 public class MultiDimensionalArrays {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // массив 10 с помощью цикла реализовано от 5 до 10
-      int [] array = new int [10];
-      for (int i = 5; i < array.length; i++) {
-          System.out.println(Arrays.toString(array));
-      }
-
-      // найти среднее значение в массиве
-        int [] numbers = {10 , 20, 30 , 40, 50, 60, 80};
-      int sum = 10;
-      for (int num : numbers) {
-          sum += num;
-      }
-
-      double average = (double) sum / numbers.length; // посчитать среднее значение
-
-      // результат
-        System.out.println("Сумма : " + sum);
-        System.out.println("Среднее значение : " + average);
-}
-
-
-// Изучение массива - []
-
-class ExplorationOfTheArrays{
-    public static void main(String[] args) {
-        // заполнение при обьявление
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        System.out.println(Arrays.toString(numbers));
-        System.out.println(numbers.length);
-
-        // через цикл
-        int [] array = new int [20];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i * 10;
+        // 2D [Матрицанын суммасын табуу]
+        int[][] numbers = {
+                {1, 2},
+                {3, 4},
+        };
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                sum += numbers[i][j];
+            }
         }
-        System.out.println(Arrays.toString(array));
-        System.out.println(array.length);
-    }
+        System.out.println("Сумма : " + sum);
+
+        // [Матрицаны толтуруу]
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Катарлардын саны : ");
+        int rows = scanner.nextInt();
+        System.out.println("Тилкелердин санын : ");
+        int cols = scanner.nextInt();
+
+        int[][] matrix = new int[rows][cols];
+
+        System.out.println("Матрицанын элементтерин киргизинис : ");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print("Элемент [" + i + "] [" + j + "] : ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println("\n Матрица : ");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+        scanner.close();
     }
 }
+
+
+
+
+
+
+
+
+
+
