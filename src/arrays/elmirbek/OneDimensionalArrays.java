@@ -31,6 +31,46 @@ public class OneDimensionalArrays {
         // результат
         System.out.println("Сумма : " + sum);
         System.out.println("Среднее значение : " + average);
+
+
+        // Найти max и min значение
+        // → {7, 2, 9, 4, 1}
+        // → min=1,
+        // → max=9
+
+        int [] findMinMaxValue = {7, 2, 9, -1, 1};
+        int min = findMinMaxValue[0];
+        int max = findMinMaxValue[0];
+
+        for (int i = 1; i < findMinMaxValue.length; i++) {
+            if (findMinMaxValue[i] < min) {
+                min = findMinMaxValue[i];
+            }
+            if (findMinMaxValue[i] > max) {
+                max = findMinMaxValue[i];
+            }
+        }
+
+        // результат
+        System.out.println("MIN сумма : " + min);
+        System.out.println("MAX сумма : " + max);
+
+        // Найти отличника и троечника
+        String students [] = {"Адилет", "Гаухар, Элмирбек, Кайрат"};
+        String straightStudent = "Адилет";
+        String averageStudent = "Элмирбек";
+
+        for (int i = 1; i < students.length; i++) {
+            if (students[i].equals(straightStudent)) {
+                System.out.println("Троченик : " + students[i]);
+            }
+            if (students[i].equals(averageStudent)) {
+                System.out.println("Отличник : " + students[i]);
+            }
+        }
+         // резултат
+        System.out.println("Отличник : " + straightStudent);
+        System.out.println("Троечник : " + averageStudent);
     }
 
 
