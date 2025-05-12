@@ -1,6 +1,6 @@
 package oop.azamat;
 
-public class Main {
+public class CarImpl {
     public static void main(String[] args) {
 
         /*Phone phone = new Phone("Nokia");
@@ -11,10 +11,13 @@ public class Main {
         smartphone.printSmartphoneInfo();*/
 
         System.out.println("Объект түзүп, ичиндеги методду чакырдык");
+
         Car atamaMashine = new Car();
+
+
+
         atamaMashine.setModel("Toyota Camry");
-        atamaMashine.setYear(2025);
-        atamaMashine.setColor("Кара");
+        atamaMashine.setYear(-2025);
         atamaMashine.sayHello();
 
         Car apamaMashine = new Car();

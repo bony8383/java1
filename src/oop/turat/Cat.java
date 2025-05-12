@@ -5,7 +5,6 @@ public class Cat {
     String name;
     int age;
 
-    // Конструктор
     public Cat(String name, int age) {
         this.name = name;
         this.age = age;
