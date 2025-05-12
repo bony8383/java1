@@ -10,6 +10,7 @@ public class MultiDimensionalArrayExample {
         };
         // 2. Бир элементке жетүү
         System.out.println("[0][0] индекстеги элемент: " + matrix[0][0]);
+
         // 3. Матрицаны толугу менен чыгаруу
         System.out.println("Матрица:");
         for (int[] ints : matrix) {
